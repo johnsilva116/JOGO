@@ -1,0 +1,181 @@
+print("atenção somente será aceito os comandos como descritos em aspas")   
+modo=str(input("Insira o Modo de Jogo: 'P1vscom' ou 'P1vsP2': "))          
+print("Você selecionou: ",modo)                                            
+vezes=str(input("Insira se é 'Uma_Rodada' ou 'Melhor_de_tres': "))           
+print("Você selecionou: ",vezes)
+
+P1vscom="P1vscom"
+P1vsP2="P1vsP2"
+
+Uma_Rodada="Uma_Rodada"
+Melhor_de_tres="Melhor_de_tres"
+
+pedra="pedra"
+papel="papel"
+tesoura="tesoura"
+
+i=0
+
+seleçao = [papel,tesoura,pedra,papel,tesoura,pedra,papel,tesoura,pedra]
+
+import random
+from time import sleep
+
+if(vezes==Uma_Rodada):
+    if(modo==P1vscom):
+        j1=str(input("Jogador 1 selecione 'pedra', 'papel' ou 'tesoura': "))
+        print("Você selecionou: ",j1)
+        for contagem in range(0,1):
+            sleep(1)
+        print("com selecionando...")
+        j2=random.choice(seleçao)
+        for contagem in range(0,1):
+            sleep(1)
+        print("Com selecionou: ",j2)
+        print("Calculando...")
+        for contagem in range(0,1):
+            sleep(1)
+        print("O Vencedor é:")
+        for contagem in range(0,1):
+            sleep(1)
+        if(j1==pedra):        
+            j1=3
+        elif(j1==tesoura):
+            j1=2
+        elif(j1==papel):
+            j1=1
+        if(j2==pedra):
+            j2=3
+        elif(j2==tesoura):
+            j2=2
+        elif(j2==papel):
+            j2=1
+        if(j1==j2):
+            print("Empate")
+        elif(j1==1 and j2==2):
+            print("Jogador com venceu")
+        elif(j1==1 and j2==3):
+            print("Jogador 1 venceu")
+        if(j1==2 and j2==1):
+            print("Jogador 1 venceu")
+        elif(j1==2 and j2==3):
+            print("Jogador com venceu")
+        if(j1==3 and j2==1):
+            print("Jogador com venceu")
+        elif(j1==3 and j2==2):
+            print("Jogador 1 venceu")
+    elif(modo==P1vsP2):
+        p1=input("Jogador 1 selecione 'pedra', 'papel' ou 'tesoura': ")
+        p2=input("Jogador 2 selecione 'pedra', 'papel' ou 'tesoura': ")
+        p1=str(p1)
+        p2=str(p2)
+        if(p1==pedra):
+            p1=3
+        elif(p1==tesoura):
+            p1=2
+        elif(p1==papel):
+            p1=1
+        if(p2==pedra):
+            p2=3
+        elif(p2==tesoura):
+            p2=2
+        elif(p2==papel):
+            p2=1
+        if(p1==p2):
+            print("Empate")
+        elif(p1==1 and p2==2):
+            print("Jogador 2 venceu")
+        elif(p1==1 and p2==3):
+            print("Jogador 1 venceu")
+        if(p1==2 and p2==1):
+            print("Jogador 1 venceu")
+        elif(p1==2 and p2==3):
+            print("Jogador 2 venceu")
+        if(p1==3 and p2==1):
+            print("Jogador 2 venceu")
+        elif(p1==3 and p2==2):
+            print("Jogador 1 venceu")
+    else:
+        print("modo invalido")
+elif(vezes==Melhor_de_tres):
+    if(modo==P1vscom):
+        while(i<3):
+            j1=str(input("Jogador 1 selecione 'pedra', 'papel' ou 'tesoura': "))
+            print("Você selecionou: ",j1)
+            for contagem in range(0,1):
+                sleep(1)
+            print("com selecionando...")
+            j2=random.choice(seleçao)
+            for contagem in range(0,1):
+                sleep(1)
+            print("Com selecionou: ",j2)
+            print("Calculando...")
+            for contagem in range(0,1):
+                sleep(1)
+            print("O Vencedor é:")
+            for contagem in range(0,1):
+                sleep(1)
+            if(j1==pedra):        
+                j1=3
+            elif(j1==tesoura):
+                j1=2
+            elif(j1==papel):
+                j1=1
+            if(j2==pedra):
+                j2=3
+            elif(j2==tesoura):
+                j2=2
+            elif(j2==papel):
+                j2=1
+            if(j1==j2):
+                print("Empate")
+            elif(j1==1 and j2==2):
+                print("Jogador com venceu")
+            elif(j1==1 and j2==3):
+                print("Jogador 1 venceu")
+            if(j1==2 and j2==1):
+                print("Jogador 1 venceu")
+            elif(j1==2 and j2==3):
+                print("Jogador com venceu")
+            if(j1==3 and j2==1):
+                print("Jogador com venceu")
+            elif(j1==3 and j2==2):
+                print("Jogador 1 venceu")
+            i=i+1
+    elif(modo==P1vsP2):
+        while(i<3):
+            p1=input("Jogador 1 selecione 'pedra', 'papel' ou 'tesoura': ")
+            p2=input("Jogador 2 selecione 'pedra', 'papel' ou 'tesoura': ")
+            p1=str(p1)
+            p2=str(p2)
+            if(p1==pedra):
+                p1=3
+            elif(p1==tesoura):
+                p1=2
+            elif(p1==papel):
+                p1=1
+            if(p2==pedra):
+                p2=3
+            elif(p2==tesoura):
+                p2=2
+            elif(p2==papel):
+                p2=1
+            if(p1==p2):
+                print("Empate")
+            elif(p1==1 and p2==2):
+                print("Jogador 2 venceu")
+            elif(p1==1 and p2==3):
+                print("Jogador 1 venceu")
+            if(p1==2 and p2==1):
+                print("Jogador 1 venceu")
+            elif(p1==2 and p2==3):
+                print("Jogador 2 venceu")
+            if(p1==3 and p2==1):
+                print("Jogador 2 venceu")
+            elif(p1==3 and p2==2):
+                print("Jogador 1 venceu")
+            i=i+1
+    else:
+        print("modo invalido")
+else:
+    print("numero de vezes invalida") 
